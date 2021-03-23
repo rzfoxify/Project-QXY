@@ -1,7 +1,8 @@
 FROM amazonlinux
 
 RUN yum update -y && \
-    yum install -y python3-pip python3-dev
+    yum install -y python3-pip python3-dev && \
+    pip3 install --upgrade pip 
 
 COPY ./requirements.txt /app/requirements.txt
 
